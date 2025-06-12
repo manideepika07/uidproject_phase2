@@ -71,7 +71,6 @@
       box-shadow: 0 12px 48px rgba(30,136,229,0.4), 0 0 15px rgba(30,136,229,0.6);
     }
 
-    /* Emojis in background */
     .emoji {
       position: absolute;
       font-size: 84px;
@@ -86,14 +85,12 @@
       100% { transform: rotate(360deg); }
     }
 
-    /* Positioning emojis: top, middle, bottom across left & right */
     .e1  { top: 5%; left: 8%; }
     .e2  { top: 5%; right: 8%; }
     .e3  { top: 20%; left: 20%; }
     .e4  { top: 20%; right: 20%; }
     .e5  { top: 32%; left: 5%; }
     .e6  { top: 32%; right: 5%; }
-
     .e7  { bottom: 32%; left: 5%; }
     .e8  { bottom: 32%; right: 5%; }
     .e9  { bottom: 20%; left: 20%; }
@@ -101,6 +98,7 @@
     .e11 { bottom: 5%; left: 8%; }
     .e12 { bottom: 5%; right: 8%; }
 
+    /* Responsive tweaks */
     @media (max-width: 600px) {
       .rotating-logo {
         width: 180px;
@@ -114,6 +112,31 @@
         font-size: 54px;
         opacity: 0.08;
       }
+    }
+
+    /* Bottom corner button */
+    .corner-button {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #3a3ad6, #1e88e5);
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(30,136,229,0.3);
+      transition: 0.3s ease;
+      z-index: 10;
+    }
+
+    .corner-button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #1e88e5, #3a3ad6);
+      color: #ffe082;
+      box-shadow: 0 12px 36px rgba(30,136,229,0.4);
     }
   </style>
 </head>
@@ -138,6 +161,9 @@
     <img src="logo.png" alt="CINESPHERE Logo" class="rotating-logo" />
     <a href="website.html" target="_blank" class="enter-link">Enter Site</a>
   </div>
+
+  <!-- Bottom Corner Button -->
+  <a href="page.html"><button class="corner-button">Info</button></a>
 
 </body>
 </html>
